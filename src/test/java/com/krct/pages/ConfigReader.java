@@ -16,7 +16,7 @@ public class ConfigReader {
             FileInputStream fis =
                     new FileInputStream(
                             System.getProperty("user.dir")
-                                    + "src/test/java/com/krct/pages/config.properties");
+                                    + "/src/test/java/com/krct/pages/config.properties");
 
             prop.load(fis);
 

@@ -15,17 +15,20 @@ public class BaseTest {
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-//    private ConfigReader config = new ConfigReader();
+    private ConfigReader config = new ConfigReader();
 
     @BeforeMethod
     public void setUp() {
 
 
+        driver = new ChromeDriver();
 
-
-        driver=new ChromeDriver();
         wait=new WebDriverWait(driver,Duration.ofSeconds(10));
-        driver.get("https://parabank.parasoft.com/parabank/index.html");
+
+        System.out.println(config.getBaseUrl());
+
+        driver.get(config.getBaseUrl());
+
 
     }
 
