@@ -8,27 +8,24 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-import com.krct.pages.ConfigReader;
+//import com.krct.pages.ConfigReader;
 
 public class BaseTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
 
-    private ConfigReader config = new ConfigReader();
+//    private ConfigReader config = new ConfigReader();
 
     @BeforeMethod
     public void setUp() {
 
 
-        driver = new ChromeDriver();
 
-        wait = new WebDriverWait(driver,
-                Duration.ofSeconds(config.getTimeout()));
 
-        System.out.println(config.getBaseUrl());
-
-        driver.get(config.getBaseUrl());
+        driver=new ChromeDriver();
+        wait=new WebDriverWait(driver,Duration.ofSeconds(10));
+        driver.get("https://parabank.parasoft.com/parabank/index.html");
 
     }
 
