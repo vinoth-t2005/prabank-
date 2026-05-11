@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
 
-//import com.krct.pages.ConfigReader;
 
 public class BaseTest {
 
